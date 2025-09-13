@@ -2,6 +2,15 @@
 using namespace std;
 
 int main() {
+    int z = 10;
+
+    double zz = 2.5;
+
+    z = zz;  // z int    zz double ----> z == 2
+
+    cout << "z es igual a: " << z;
+
+
     // Declaración de variables
     // = SIGNIFICA ASIGNACIÓN (a la variable a le asigno el valor  10)
 
@@ -11,7 +20,7 @@ int main() {
     float x = 5.5; // Variables de punto flotante
     double y = 2.0; 
 
-    bool flag = true;         // Variable booleana
+    bool flag = false;         // Variable booleana
 
 
     // Operadores Aritméticos

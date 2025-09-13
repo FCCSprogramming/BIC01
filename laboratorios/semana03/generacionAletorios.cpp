@@ -10,6 +10,7 @@ int main() {
 
     // Generar un número aleatorio (entre 0 y RAND_MAX)
     int aleatorio = rand();
+    cout << "El valor de RAND_MAX es: " << RAND_MAX << endl;
     cout << "Número aleatorio (entre 0 y RAND_MAX): " << aleatorio << endl;
 
     // Generar un número aleatorio entre 0 y 9

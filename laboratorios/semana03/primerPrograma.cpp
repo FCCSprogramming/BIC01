@@ -2,13 +2,15 @@
 using namespace std; // Permite usar directamente los elementos del espacio de nombres estándar (std), como cout sin escribir std::cout
                                 
 int main() {
-    cout << "Mi primer programa en C++" << endl;
-    cout << "Bienvenidoa a BIC01";
+    cout << "Bienvenidos a BIC01 - H" <<endl;
+    cout << "Este es mi primer programa";
     return 0;
 }
 
 // COMPILAR
 // c++ primerPrograma.cpp -o primerPrograma
+// de forma equivalente
+// g++ primerPrograma.cpp -o primerPrograma
 
 // EJECUTAR
 // ./primerPrograma
