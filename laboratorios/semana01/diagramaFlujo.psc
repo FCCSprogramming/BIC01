@@ -5,5 +5,6 @@ Algoritmo volumen_caja
 	// procesando datos
 	volumen <- altura * ancho * largo
 	// salida
+	// primer aporte
 	Escribir "El volumen es: ", volumen
 FinAlgoritmo
