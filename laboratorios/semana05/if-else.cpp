@@ -21,6 +21,11 @@ int main() {
     cout << "Ingrese la nota: ";
     cin >> nota;
 
+  
+
+    // Ingreso de datos
+    
+
     // Procesamiento 
 
     
