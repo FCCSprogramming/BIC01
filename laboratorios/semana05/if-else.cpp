@@ -1,6 +1,7 @@
 ﻿/*
 ESTRUCTURAS CONDICIONALES: if-else, switch
-ESTRUCTURA REPETITIVA: do-while 
+ESTRUCTURA REPE;
+TITIVA: do-while 
 
 Ejemplo ilustrativo
 
@@ -12,11 +13,29 @@ Si nota <13 Y nota >= 10 --> regular
 Si no desaprobado 
 */
 
-#include <iostream>
+#include <iostream> // para entrada y salida de datos
 using namespace std;
+int main() {
+    // ingreso de datos
+    double nota;
+    cout << "Ingrese la nota: ";
+    cin >> nota;
 
-int main(){
+    // Procesamiento 
 
     
+
+    if (nota >= 15) {
+        cout << "Excelente" <<endl;
+    } else if (nota >= 13) {
+        cout << "Bueno" <<endl;
+    } else if (nota >= 10) {
+        cout << "Regular" <<endl;
+    } else {
+        cout << "Desaprobado" << endl;
+    }
+
     return 0;
 }
+
+
