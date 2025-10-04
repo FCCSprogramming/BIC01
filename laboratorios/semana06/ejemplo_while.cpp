@@ -10,41 +10,56 @@ d) Muestre además la cantidad de aprobados (nota >= 10)
 #include <iostream>
 using namespace std;
 
-int main(){
-    float nota;
-
-    int contadorNotas = 0;
-    float sumaNotas = 0.0;
-    int aprobados = 0;
-
-    cout << "Ingrese la nota del estudiante: (-1 para terminar) ";
+int main() {
+    double nota;
+    int cuentaNotas = 0;
+    double acumulaNotas = 0.0;
+    int contarAprobados = 0;
+    cout << "ingrese la nota del estudiante (-1 para terminar)" <<endl; 
     cin >> nota;
 
 
-
     while (nota != -1) {
-        if (nota >= 0 && nota <= 20) {
-            cout << "Nota registrada: " << nota << endl;
-            sumaNotas = sumaNotas + nota; // sumaNotas += nota;
-            contadorNotas++; // contadorNotas = contadorNotas + 1;
-
+        if (nota >=0 && nota <= 20){
             if (nota >= 10) {
-                aprobados++;
+                contarAprobados++;
             }
+            cuentaNotas++; // cuentaNotas = cuentaNotas + 1;
+            acumulaNotas += nota; // acumulaNotas = acumulaNotas + nota;
+            cout << "Nota registrada ..." <<endl;
         } else {
-            cout << "Nota inválida, debe estar entre 0 y 20" << endl;
+            cout << "Error, nota debe estar entre 0 y 20" <<endl;
         }
-        
         cin >> nota;
     }
 
-    // Calculo del promedio
-    if (contadorNotas > 0 ) {
-        cout << "Promedio: " <<(sumaNotas/contadorNotas) << endl;// 3/2 == 1
+    if (cuentaNotas > 0) {
+        cout << "El promedio es: " << acumulaNotas/cuentaNotas <<endl;
     }
+
+    cout << "El numero de aprobados es: " << contarAprobados <<endl;
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Ejercicio

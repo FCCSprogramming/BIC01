@@ -10,12 +10,49 @@ using namespace std;
 
 int main(){
 
-    for (int i = 0; i <= 12; ++i) {
-        cout << i << " x "  << 7 << " = " << i*7 <<endl;
+    // solicitamos datos
+    int n; 
+    cout << "ingrese la tabla que desea mostrar: ";
+    cin >> n;
+
+
+    // if (n < 1 or n > 12) {
+    //     return 1;
+    // }
+    //validamos la entrada
+    while (n < 1 or n > 12) {
+        cout << "Dato incorrecto, debe estar entre 1 y 12" <<endl;
+        cout << "Por favor, vuelva a ingresar el dato: " <<endl;
+        cin>> n;
+    }
+
+
+
+    for (int i = 0; i <= 12; i++) {
+        cout << n << " x " << i << " = " << n * i <<endl;
     }
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Ejercicio
