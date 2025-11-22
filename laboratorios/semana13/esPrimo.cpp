@@ -4,7 +4,6 @@ using namespace std;
 
 bool esPrimo(int n) {
     if(n <= 1) return false;
-    if(n == 2) return false;
 
     for (int i = 2; i <= sqrt(n); ++i) {
         if(n % i == 0) {
@@ -17,7 +16,7 @@ bool esPrimo(int n) {
 
 int main(){
 
-    int n = -2;
+    int n = 2;
 
     bool resultado = esPrimo(n);
 
