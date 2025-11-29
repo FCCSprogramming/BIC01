@@ -4,6 +4,9 @@
 
 La **recursividad** es una técnica de programación en la que una función **se llama a sí misma** para resolver un problema más grande dividiéndolo en problemas más pequeños del mismo tipo, hasta llegar a un caso que pueda resolverse directamente (**caso base**)
 
+
+![alt text](image.png)
+
 ---
 
 ## 2. Estructura de una Función Recursiva
@@ -21,11 +24,11 @@ using namespace std;
 
 void cuentaRegresiva(int n) {
     if (n == 0) {               // Caso base
-        cout << "¡Despegue!" << endl;
+        cout << "Se alcanzó el caso base" << endl;
         return;
     }
 
-    cout << n << endl;          // Trabajo antes de la llamada
+    cout << n << endl;          // Impresión antes de la llamada
     cuentaRegresiva(n - 1);     // Caso recursivo
 }
 
@@ -34,7 +37,7 @@ int main() {
 }
 ```
 
-**Idea clave:** Cada llamada imprime un número y delega el resto del trabajo a una versión más simple del problema: contar desde un número menor.
+**Principio básico:** Cada llamada imprime un número y delega el resto del trabajo a una versión más simple del problema: contar desde un número menor.
 
 ---
 
@@ -42,9 +45,9 @@ int main() {
 
 Muchas funciones matemáticas se definen naturalmente de manera recursiva. Por ejemplo, el factorial:
 
-[ n! = n \cdot (n-1)! ]
+$n! = n \cdot (n-1)!$
 con el caso base:
-[ 0! = 1 ]
+$0! = 1$
 
 ### Ejemplo 2: Factorial
 
@@ -137,44 +140,15 @@ Una clave para entender la recursividad es visualizar la "pila" de llamadas.
 ```cpp
 void demo(int n) {
     if (n == 0) {
-        cout << "Base" << endl;
+        cout << "Se alanzó el caso base" << endl;
         return;
     }
-    cout << "Antes: " << n << endl;
+    cout << "Antes de la llamada: " << n << endl;
     demo(n - 1);
-    cout << "Después: " << n << endl;
+    cout << "Después de la llamada: " << n << endl;
 }
 ```
 
 Esto muestra claramente la entrada y salida de cada llamada.
 
 ---
-
-<!--
-## 9. Ejemplo: Dibujar un Árbol Fractal (conceptual)
-
-Aunque no podremos graficar aquí, un árbol fractal es una representación visual perfecta de recursividad:
-
-* Un tronco se divide en dos ramas
-* Cada rama se divide en otras dos
-* Hasta que la rama sea muy pequeña
-
-El algoritmo:
-
-```
-dibujar(rama):
-    si la rama es demasiado pequeña → retornar
-    dibujar(rama izquierda)
-    dibujar(rama derecha)
-```
-
-Este ejemplo muestra cómo la recursividad es una herramienta para crear patrones infinitos.
-
----
-
-
-Implemente una función recursiva en C++ que determine si una palabra es un palíndromo. No use `string`, sólo arreglos de caracteres.
-
----
--->
-

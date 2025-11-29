@@ -2,15 +2,6 @@
 using namespace std;
 
 /*
-0 1 // casos base
-1
-2
-3
-5
-*/
-
-// memoizacion: Optimizar implementacion recursivas
-/*
 fibo(5) = fibo(4) + fibo(3)
 fibo(4) = fibo(3) + fibo(2)
 fibo(3) = fibo(2) + fibo(1)
