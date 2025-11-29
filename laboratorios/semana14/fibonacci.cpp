@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 using namespace std;
 
+
+// Optimización por memoización
 /*
 fibo(5) = fibo(4) + fibo(3)
 fibo(4) = fibo(3) + fibo(2)

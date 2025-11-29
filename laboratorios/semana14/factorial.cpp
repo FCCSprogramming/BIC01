@@ -12,19 +12,26 @@ n! = n * (n-1)!
 */
 
 int factR(int n) {
+    cout << "Llamada f(" << n << ")" << endl; 
     // caso base
     if(n == 0) {
+        cout << "Caso base -> retorna 1" <<endl; 
         return 1;
-    }
+    } 
 
-    return n*factR(n-1);
+    int resultado = n*factR(n-1);
+    
+    cout << " Retorna f(" << n << ")" << resultado << endl;
+
+    return resultado;
 }
+    
 
 
 
 int main(){
-    cout << factR(5) <<endl;
-    cout << factR(0) <<endl;
+    //cout << factR(5) <<endl;
+    //cout << factR(0) <<endl;
     cout << factR(-2) <<endl;
 
     return 0;
