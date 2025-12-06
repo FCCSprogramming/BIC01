@@ -4,6 +4,9 @@ using namespace std;
 
 int main(){
 
+    int arr[4] = {1,2,3,4};
+    cout << arr[i] << endl; 
+
     string conteo = "mañana";
 
     char nombre2[10];
