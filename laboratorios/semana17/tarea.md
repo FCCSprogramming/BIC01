@@ -13,7 +13,7 @@ Implementar la siguientes funciones:
  
 3. Una función  que:
    - Remplace todas las palabras que comiencen con consonante por `"X"` pero mantengan el número de letras.  
-     Ejemplo: `"sol"` → `"XXX"`
+     Ejemplo: `"sol luna azul"` → `"XXX XXXX azul"`
 
 4. La función principal deberá:
    - Pedir una oración.  
