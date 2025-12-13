@@ -27,9 +27,7 @@ void invertirCadena(char destino[], int inicio, int fin) {
 // 2: SEGUNDA FORMA, usando string
 
 // hola
-
-
-string inveritir(string s) {
+string invertir(string  s) {
     // CASO BASE
     if (s.size() <= 1) {
         return s;
@@ -73,10 +71,13 @@ void modificarFrase(char cad[]){
 
 int main(){
 
+
     char frase[200];
     
     cout << "Ingrese una cadena: ";
     cin.getline(frase, 200);
+
+    string cad = "Hola Mundo";
 
 
     cout << "\n REPORTE FINAL \n";
@@ -84,12 +85,19 @@ int main(){
     cout << "Frase original\n";
     cout << frase << endl;
 
+    cout << "Frase original\n";
+    cout << cad <<endl;
+
+
+
     char destino[200];
     strcpy(destino,frase); //agregar el encabezado <cstring>
 
     int len = strlen(frase);
     invertirCadena(destino, 0, len-1);
-    cout << "Frase invertida " << destino << endl;
+    cout << "Frase invertida:  " << destino << endl;
+
+    cout << "string invertido: " << invertir(cad) << endl;
 
     return 0;
 }
