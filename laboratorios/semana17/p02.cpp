@@ -2,20 +2,49 @@
 #include <cstring>
 using namespace std;
 
-// Invertir cadena
-// Hola   ----> aloH
-void invertirCadena(char original[], char destino[], int inicio, int fin) {
-    //Caso Base
-    if (inicio > fin)
-        return;
 
-    destino[inicio] = original[fin];
-    destino[fin] = original[inicio];
-    
-    // Caso recursivo
-    invertirCadena(original, destino, inicio + 1, fin -1);
+// Invertir cadena
+// Ingreso: Hola  
+//            Ha
+//            aloH 
+// Salida : aloH
+
+// 1. PRIMERA FORMA: usando arreglo de caracteres
+void invertirCadena(char destino[], int inicio, int fin) {
+    // CASO BASE
+    if (inicio >= fin) {
+        return;
+    }
+    swap(destino[fin], destino[inicio]);
+    // destino[inicio] = original[fin];
+    // destino[fin] = original[inicio];
+
+    //CASO RECURSIVO
+    invertirCadena(destino,inicio + 1, fin - 1);
 
 }
+
+// 2: SEGUNDA FORMA, usando string
+
+// hola
+
+
+string inveritir(string s) {
+    // CASO BASE
+    if (s.size() <= 1) {
+        return s;
+    }
+
+    // CASO RECURSIVO
+    return invertir(s.substr(1)) + s[0]; 
+}
+
+
+
+
+
+
+
 
 
 void modificarFrase(char cad[]){
@@ -38,6 +67,10 @@ void modificarFrase(char cad[]){
     }
 }
 
+
+
+
+
 int main(){
 
     char frase[200];
@@ -45,17 +78,19 @@ int main(){
     cout << "Ingrese una cadena: ";
     cin.getline(frase, 200);
 
+
     cout << "\n REPORTE FINAL \n";
 
     cout << "Frase original\n";
     cout << frase << endl;
 
     char destino[200];
+    strcpy(destino,frase); //agregar el encabezado <cstring>
 
     int len = strlen(frase);
-    invertirCadena(frase,destino, 0, 3);
-
+    invertirCadena(destino, 0, len-1);
     cout << "Frase invertida " << destino << endl;
 
     return 0;
 }
+
